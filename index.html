@@ -11,12 +11,14 @@
     <button type="button" id="my-button">
       Click me!
     </button>
-
-    <ul id="unordered-list"></ul>
-
+    
+    <textarea id="data"> Write data here </textarea>
+    
     <button type="button" id="add-data">
       Add data
     </button>
+
+    <ul id="unordered-list"></ul>
 
     <script>
       const btn1 = document.getElementById("my-button");
@@ -32,9 +34,10 @@
 
       function func2() {
         var element = document.createElement("li");
+        var data = document.getElementById("data").textContent;
         element.appendChild(
           document.createTextNode(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            data
           )
         );
         document.getElementById("unordered-list").appendChild(element);
