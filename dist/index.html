@@ -12,7 +12,7 @@
       Click me!
     </button>
     
-    <textarea id="data"> Write data here </textarea>
+    <textarea autofocus="" id="data">Write data here</textarea>
     
     <button type="button" id="add-data">
       Add data
@@ -32,7 +32,7 @@ function func1() {
 
 function func2() {
   var element = document.createElement("li");
-  var data = document.getElementById("data").textContent;
+  var data = document.getElementById("data").value;
   element.appendChild(document.createTextNode(data));
   document.getElementById("unordered-list").appendChild(element);
 }</script>
