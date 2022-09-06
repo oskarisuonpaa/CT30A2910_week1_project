@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h1 id="headline">Hello world</h1>
+
+    <button type="button" id="my-button">
+      Click me!
+    </button>
+
+    <ul id="unordered-list"></ul>
+
+    <button type="button" id="add-data">
+      Add data
+    </button>
+
+    <script>
+      const btn1 = document.getElementById("my-button");
+      btn1.addEventListener("click", func1);
+
+      const btn2 = document.getElementById("add-data");
+      btn2.addEventListener("click", func2);
+
+      function func1() {
+        console.log("hello world");
+        document.getElementById("headline").innerHTML = "My notebook";
+      }
+
+      function func2() {
+        var element = document.createElement("li");
+        element.appendChild(
+          document.createTextNode(
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          )
+        );
+        document.getElementById("unordered-list").appendChild(element);
+      }
+    </script>
+  </body>
+</html>
